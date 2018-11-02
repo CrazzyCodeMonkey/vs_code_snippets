@@ -1,0 +1,178 @@
+{
+	"DragonDoc Class Definition": {
+		"prefix": "@class",
+		"description": "DragonDoc Class Block (Class only)",
+		"body": [
+			"/**",
+			" * ${1:Class_Description}",
+			" *",
+			" * @class ${2:${TM_DIRECTORY/[\\\\\\/]/./g}}.${3:${TM_FILENAME/(.*)\\..+$/$1/}}",
+			"*/"
+		]
+	},
+	"DragonDoc Method Definition": {
+		"prefix": "@method",
+		"description": "DragonDoc Method Block: (Inside Class only)",
+		"body": [
+			"/**",
+			" * ${1:Method_Description}",
+			" *",
+			" * @method ${2:Class_Name}",
+			"*/"
+		]
+	},
+	"DragonDoc Tag Definition": {
+		"prefix": "@tag",
+		"description": "DragonDoc Tag Block: (Custom Tag only)",
+		"body": [
+			"/**",
+			" * ${1:Tag_Description}",
+			" *",
+			" * @tag ${2:Tag_Name}",
+			"*/"
+		]
+	},
+	"DragonDoc Extend Declaration": {
+		"prefix": "@extend",
+		"description": "DragonDoc Extend Declaration (Class only)",
+		"body": [
+			"@extend ${1:Base_Class_Dot_Path}"
+		]
+	},
+	"DragonDoc Implement Declaration": {
+		"prefix": "@implement",
+		"description": "DragonDoc Implement Declaration (Class only)",
+		"body": [
+			"@implent ${1:Interface_Class_Dot_Path}"
+		]
+	},
+	"DragonDoc Associate Declaration": {
+		"prefix": "@",
+		"description": "DragonDoc Associate Declaration (Custom Tag only)",
+		"body": [
+			"@associate ${1{parent|child}} ${2:Parent_Tag} ${3:Nave_Of_Tag_In_Parent}"
+		]
+	},
+	"DragonDoc Constructor Declaration": {
+		"prefix": "@constructor",
+		"description": "DragonDoc Constructor Declaration (Method Only)",
+		"body": [
+			"@constructor"
+		]
+	},
+	"DragonDoc Static Declaration": {
+		"prefix": "@static",
+		"description": "DragonDoc Static Declaration (Class,Method Only)",
+		"body": [
+			"@static"
+		]
+	},
+	"DragonDoc Combo Access Declaration": {
+		"prefix": "@access",
+		"description": "DragonDoc Combo Access Declaration (Method only)",
+		"body": [
+			"@${1|public,remote,package,private|}"
+		]
+	},
+	"DragonDoc Public Declaration": {
+		"prefix": "@public",
+		"description": "DragonDoc Public Declaration (Method only)",
+		"body": [
+			"@public"
+		]
+	},
+	"DragonDoc Remote Declaration": {
+		"prefix": "@remote",
+		"description": "DragonDoc Remote Declaration (Method only)",
+		"body": [
+			"@remote"
+		]
+	},
+	"DragonDoc Package Declaration": {
+		"prefix": "@Package",
+		"description": "DragonDoc Package Declaration (Method only)",
+		"body": [
+			"@package"
+		]
+	},
+	"DragonDoc Private Declaration": {
+		"prefix": "@private",
+		"description": "DragonDoc Private Declaration (Method only)",
+		"body": [
+			"@private"
+		]
+	},
+	"DragonDoc Required Attribute Declaration": {
+		"prefix": "@attribute-required",
+		"description": "DragonDoc Required-Attribute Declaration (Custom Tag only)",
+		"body": [
+			"@attr ${1|array,boolean,binary,component,date,guid,numeric,object,query,string,struct,uuid,void,xml,any|} ${2:Attribute_Name} [required] ${3:Parameter_Description}"
+		]
+	},
+	"DragonDoc Optional Attribute Declaration": {
+		"prefix": "@attribute-optional",
+		"description": "DragonDoc Optional-Attribute Declaration (Custom Tag only)",
+		"body": [
+			"@attr ${1|array,boolean,binary,component,date,guid,numeric,object,query,string,struct,uuid,void,xml,any|} [${2:Attribute_Name}=${3:Default_Value}] ${4:Parameter_Description}"
+		]
+	},
+	"DragonDoc Required Argument Declaration": {
+		"prefix": "@param-required",
+		"description": "DragonDoc Required-Argument Declaration (Method only)",
+		"body": [
+			"@attr ${1|array,boolean,binary,component,date,guid,numeric,object,query,string,struct,uuid,void,xml,any|} ${2:Attribute_Name} [required] ${3:Parameter_Description}"
+		]
+	},
+	"DragonDoc Optional Argument Declaration": {
+		"prefix": "@param-optional",
+		"description": "DragonDoc Optional-Argument Declaration (Method only)",
+		"body": [
+			"@attr ${1|array,boolean,binary,component,date,guid,numeric,object,query,string,struct,uuid,void,xml,any|} [${2:Attribute_Name}=${3:Default_Value}] ${4:Parameter_Description}"
+		]
+	},
+	"DragonDoc See Declaration": {
+		"prefix": "@see",
+		"description": "DragonDoc See Declaration (Class, Method, Custom Tag)",
+		"body": [
+			"@see ${1:Referenced_Item}"
+		]
+	},
+	"DragonDoc Suppress Output Declaration": {
+		"prefix": "@suppressOutput",
+		"description": "DragonDoc Suppress Output Declaration (Class, Method, Custom Tag)",
+		"body": [
+			"@suppressOutput"
+		]
+	},
+	"DragonDoc Throws Declaration": {
+		"prefix": "@throws",
+		"description": "DragonDoc Throws Declaration (Method, Custom Tag Only)",
+		"body": [
+			"@throws ${1:Error_Type}.${2:Error}"
+		]
+	},
+	"DragonDoc Return Declaration": {
+		"prefix": "@return",
+		"description": "DragonDoc Return Declaration (Method only)",
+		"body": [
+			"@return ${1|array,boolean,binary,component,date,guid,numeric,object,query,string,struct,uuid,void,xml,any|} ${2:Description_Of_Return_Value}"
+		]
+	},
+	"DragonDoc Return Format Declaration": {
+		"prefix": "@format",
+		"description": "DragonDoc Return Format Declaration (Method only)",
+		"body": [
+			"@format ${1{}}"
+		]
+	},
+	"DragonDoc Example Declaration": {
+		"prefix": "@example",
+		"description": "DragonDoc Example Declaration (Custom Tag only)",
+		"body": [
+			"@example",
+			"  <cfimport taglib=\"${1:${TM_DIRECTORY}}\" prefix=\"${2:Tag_Prefix}\" />",
+			"  <${2:Tag_Prefix}:${3:${TM_FILENAME/(.*)\\..+$/$1/}} />",
+			"  <${2:Tag_Prefix}:${3:${TM_FILENAME/(.*)\\..+$/$1/}} >Content</${2:Tag_Prefix}:${3:${TM_FILENAME/(.*)\\..+$/$1/}}>"
+		]
+	}
+}
